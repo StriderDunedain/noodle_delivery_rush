@@ -74,10 +74,10 @@ void	action_new_game(t_game *game)
 
 void	action_toggle_emojis(t_game *game)
 {
-	if (game->settings.render_mode == RENDER_TEXT)
-		game->settings.render_mode = RENDER_EMOJI;
+	if (game->settings.render_mode == RENDER_MODE_TEXT)
+		game->settings.render_mode = RENDER_MODE_EMOJI;
 	else
-		game->settings.render_mode = RENDER_TEXT;
+		game->settings.render_mode = RENDER_MODE_TEXT;
 }
 
 void	action_resume(t_game *game)

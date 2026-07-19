@@ -1,11 +1,11 @@
 #include "delivery_rush.h"
 
-
+// Handle user position input
 static void	handle_game_input(t_game *game, int ch)
 {
 	t_vec	next_pos = game->world.player.pos;
 
-	if (ch == QUIT)  // TODO: Might have to change to the decimal of 113
+	if (ch == QUIT)
 		game->state = STATE_EXIT;
 
 	else if (ch == KEY_LEFT)
@@ -27,11 +27,13 @@ static void	handle_game_input(t_game *game, int ch)
 		game->world.player.pos = next_pos;
 }
 
+// Change the state of the `game`
 void	change_state(t_game *game, t_state new_state)
 {
 	game->state = new_state;
 }
 
+// Update the `game`'s world
 static void	update_game(t_game *game)
 {
 	update_students(game);
@@ -39,7 +41,7 @@ static void	update_game(t_game *game)
 	update_timer(game);
 }
 
-
+// Render the `game`'s world
 static void	render_game(t_game *game)
 {
 	werase(game->win);
@@ -66,14 +68,14 @@ static void	render_game(t_game *game)
 	wrefresh(game->win);
 }
 
-
+// Initialize the game
 static void	game_init(t_game *game)
 {
 	game->win = newwin(HEIGHT, WIDTH, START_Y, START_X);
 	strcpy(game->ui.message, WELCOME_MESSAGE);
 	game->state = STATE_MENU;
 	game->ui.menu.current = &g_start_menu;
-	game->settings.render_mode = RENDER_TEXT;
+	game->settings.render_mode = RENDER_MODE_TEXT;
 	game->progress.game_timer = 0;
 	game->progress.current_level = 0;
 	game->progress.current_score = 0;
@@ -129,6 +131,5 @@ int main(void)
 					break;
 			}
 		}
-
 	endwin();
 }

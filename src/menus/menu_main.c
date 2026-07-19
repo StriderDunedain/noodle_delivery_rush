@@ -1,6 +1,6 @@
 #include "delivery_rush.h"
 
-
+// Print the `visual` object to the centre of the map
 static void	print_center(WINDOW *win, int y, const t_visual *visual)
 {
 	int	x;
@@ -17,7 +17,7 @@ static void	print_center(WINDOW *win, int y, const t_visual *visual)
 	}
 }
 
-
+// Display a menu
 void	render_menu(t_game *game)
 {
 	t_menu	*menu;
@@ -42,6 +42,7 @@ void	render_menu(t_game *game)
 	wrefresh(game->win);
 }
 
+// Handle user choice in a menu
 void	handle_menu_input(t_game *game, int ch)
 {
 	t_menu	*menu;

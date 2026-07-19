@@ -1,5 +1,7 @@
 #include "delivery_rush.h"
 
+
+// Put the `visual` at `y` and `x`
 void	draw_visual(
 	t_game *game,
 	int y,
@@ -8,13 +10,13 @@ void	draw_visual(
 	int attrs
 )
 {
-	if (game->settings.render_mode == RENDER_EMOJI)
+	if (game->settings.render_mode == RENDER_MODE_EMOJI)
 		mvwprintw(game->win, y, x, WIDE_STRING_FORMAT, visual->emoji);
 	else
 		mvwaddch(game->win, y, x, visual->ascii | attrs);
 }
 
-
+// Render students on screen
 void	render_students(t_game *game)
 {
 	for (int i = 0; i < STUDENT_COUNT; ++i)
@@ -30,7 +32,7 @@ void	render_students(t_game *game)
 	}
 }
 
-
+// Render orders on screen
 void	render_orders(t_game *game)
 {
 	t_order	order;

@@ -23,8 +23,8 @@ typedef enum e_state
 
 typedef enum e_render_mode
 {
-	RENDER_TEXT,
-	RENDER_EMOJI,
+	RENDER_MODE_TEXT,
+	RENDER_MODE_EMOJI,
 
 	RENDER_MODE_COUNT
 }	t_render_mode;

@@ -1,6 +1,7 @@
 #include "delivery_rush.h"
 
 
+// Update the students in the world
 void	update_students(t_game *game)
 {
 	for (int i = 0; i < STUDENT_COUNT; ++i)
@@ -26,7 +27,7 @@ void	update_students(t_game *game)
 		}
 }
 
-
+// Update the orders in the world
 void	update_orders(t_game *game)
 {
 	for (int i = 0; i < ORDER_TYPE_COUNT; ++i)
@@ -55,7 +56,7 @@ void	update_orders(t_game *game)
 	}
 }
 
-
+// Update `game`'s timer
 void	update_timer(t_game *game)
 {
 	if (game->ui.message_timer > 0)
