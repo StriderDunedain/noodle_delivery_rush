@@ -1,4 +1,4 @@
-#include "delivery_rush.h"
+#include "../include/delivery_rush.h"
 
 // Checks whether position `vec` is occupied by any object in `game`
 static bool	position_occupied(t_game *game, t_vec vec)

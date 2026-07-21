@@ -1,4 +1,4 @@
-#include "delivery_rush.h"
+#include "../include/delivery_rush.h"
 
 
 // Update the students in the world
@@ -52,7 +52,7 @@ void	update_orders(t_game *game)
 			);
 			break;  // prevent multiple pick-ups
 		}
-		// TODO: Add lifetimer counter decrease here
+		// TODO: Add life timer counter decrease here
 	}
 }
 
@@ -73,7 +73,7 @@ void	update_timer(t_game *game)
 
 	if (game->progress.game_timer <= 0)
 	{
-		// TODO: Maybe change this to a different menu depending on whether the person actaully won or no
+		// TODO: Maybe change this to a different menu depending on whether the person actually won or no
 		change_state(game, STATE_GAME_OVER);
 		set_menu(game, &g_game_over_menu);
 	}

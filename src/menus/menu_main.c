@@ -1,4 +1,4 @@
-#include "delivery_rush.h"
+#include "../include/delivery_rush.h"
 
 // Print the `visual` object to the centre of the map
 static void	print_center(WINDOW *win, int y, const t_visual *visual)

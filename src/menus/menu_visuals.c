@@ -4,10 +4,22 @@
 
 // START MENU
 const t_menu_item	g_start_items[] = {
-	{START_GAME_OPTION, action_new_game},
-	{SELECT_DIFFICULTY_OPTION, action_open_difficulty},
-	{TOGGLE_EMOJIS_OPTION, action_toggle_emojis},
-	{QUIT_OPTION, action_quit}
+	{
+		.text = START_GAME_OPTION,
+		.action = action_new_game
+	},
+	{
+		.text = SELECT_DIFFICULTY_OPTION,
+		.action = action_open_difficulty
+	},
+	{
+		.text = TOGGLE_EMOJIS_OPTION,
+		.action = action_toggle_emojis
+	},
+	{
+		.text = QUIT_OPTION,
+		.action = action_quit
+	}
 };
 
 const t_menu_def	g_start_menu = {

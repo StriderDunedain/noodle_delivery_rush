@@ -14,6 +14,6 @@ extern const t_menu_def		g_difficulty_menu;
 extern const t_menu_def		g_pause_menu;
 extern const t_menu_def		g_game_over_menu;
 
-extern const t_level		g_levels;
+extern const t_level		g_levels[];
 
 #endif

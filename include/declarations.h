@@ -2,6 +2,7 @@
 # define DECLARATIONS_H
 
 # include <stdbool.h>
+# include "types.h"
 
 # define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
 

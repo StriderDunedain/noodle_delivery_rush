@@ -1,4 +1,4 @@
-#include "delivery_rush.h"
+#include "../include/delivery_rush.h"
 
 // Handle user position input
 static void	handle_game_input(t_game *game, int ch)
